@@ -17,10 +17,11 @@ void FillArray (string[] collection)
 }
 void PrintArray (string [] coll)
 {
-    Console.WriteLine(string.Join(" ", coll));
+    Console.WriteLine(string.Join(", ", coll));
 }
 string [] StartArray = new string [new Random().Next(1, 11)];
 FillArray(StartArray);
+Console.WriteLine ("Исходный массив:");
 PrintArray(StartArray);
 int len = 0;
 string [] ResArray = new string [len];
@@ -33,6 +34,8 @@ for (int i = 0; i < StartArray.Length; i++)
         len ++;
     }
 }
+Console.WriteLine ();
+Console.WriteLine ("Массив с элементами до 4 символов:");
 PrintArray(ResArray);
 
 
